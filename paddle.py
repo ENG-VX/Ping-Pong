@@ -8,12 +8,13 @@ class Paddle(Turtle):
         self.shapesize(5,1)
         self.goto(x,0)
 
-    def move(self, direction=""):
-        if direction == "up":
-            self.goto(self.xcor(),self.ycor()+20)
-            print("work")
-        elif direction == "down":
-            self.goto(self.xcor(),self.ycor()-20)
+    def move_up(self):
+        while True:
+            self.goto(self.xcor(),self.ycor()+5)
 
+    def move_down(self):
+        while True:
+            self.goto(self.xcor(),self.ycor()-5)
+           
 
 

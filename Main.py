@@ -11,8 +11,10 @@ L_paddle = Paddle(-380)
 R_paddle = Paddle(380)
 
 
-window.onkey(lambda: L_paddle.move("up"), "w")
-window.onkey(lambda: L_paddle.move("down"), "s")
+window.onkey(L_paddle.move_up, "w")
+window.onkey(L_paddle.move_down, "s")
+window.onkey(R_paddle.move_up, "Up")
+window.onkey(R_paddle.move_down, "Down")
 
 window.listen()
 window.exitonclick()
