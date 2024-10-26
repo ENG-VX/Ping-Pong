@@ -7,13 +7,19 @@ class Paddle(Turtle):
         self.penup()
         self.shapesize(5,1)
         self.goto(x,0)
+        self.moveUP = True
+        self.moveDOWN = True
 
     def move_up(self):
-        while True:
+        self.moveUP = True
+        self.moveDOWN = False
+        while self.ycor()<250 and self.moveUP:
             self.goto(self.xcor(),self.ycor()+5)
 
     def move_down(self):
-        while True:
+        self.moveUP = False
+        self.moveDOWN = True
+        while self.ycor()>-250 and self.moveDOWN:
             self.goto(self.xcor(),self.ycor()-5)
            
 

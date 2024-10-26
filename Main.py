@@ -18,6 +18,6 @@ window.onkey(R_paddle.move_up, "Up")
 window.onkey(R_paddle.move_down, "Down")
 
 ball = Ball()
-ball.moving()
+ball.moving(L_paddle, R_paddle)
 
 window.exitonclick()

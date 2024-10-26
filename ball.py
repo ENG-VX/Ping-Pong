@@ -7,7 +7,7 @@ class Ball(Turtle):
         self.color("white")
         self.penup()
 
-    def moving(self):
+    def moving(self, L_paddle, R_paddle):
         x_add = 5
         y_add = 5
         while True:
@@ -16,6 +16,9 @@ class Ball(Turtle):
                 y_add *= -1
                 
             elif x>=380 or x<=-380:
+                x_add *= -1
+
+            elif self.distance(L_paddle)<=20 or self.distance(R_paddle)<=20:
                 x_add *= -1
                 
             self.goto(self.xcor()+x_add, self.ycor()+y_add)
