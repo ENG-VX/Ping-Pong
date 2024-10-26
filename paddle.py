@@ -10,10 +10,10 @@ class Paddle(Turtle):
         self.dy = 0
 
     def move_up(self):
-        self.dy = 5
+        self.dy = 10
 
     def move_down(self):
-        self.dy = -5
+        self.dy = -10
 
     def stop(self):
         self.dy = 0
