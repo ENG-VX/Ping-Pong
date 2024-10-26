@@ -12,12 +12,19 @@ L_paddle = Paddle(-380)
 R_paddle = Paddle(380)
 
 window.listen()
-window.onkey(L_paddle.move_up, "w")
-window.onkey(L_paddle.move_down, "s")
-window.onkey(R_paddle.move_up, "Up")
-window.onkey(R_paddle.move_down, "Down")
+window.onkeypress(L_paddle.move_up, "w")
+window.onkeypress(L_paddle.move_down, "s")
+window.onkeypress(R_paddle.move_up, "Up")
+window.onkeypress(R_paddle.move_down, "Down")
 
 ball = Ball()
-ball.moving(L_paddle, R_paddle)
+while True:
+    ball.moving(L_paddle, R_paddle)
+    R_paddle.update()
+    L_paddle.update()
+    
+
+
+
 
 window.exitonclick()
